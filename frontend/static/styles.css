@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+.container { max-width: 1400px; margin: 0 auto; background: rgba(255, 255, 255, 0.95); border-radius: 20px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); padding: 30px; backdrop-filter: blur(10px); }
+.header { text-align: center; margin-bottom: 30px; }
+.header h1 { color: #2c3e50; font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+.header p { color: #7f8c8d; font-size: 1.1em; }
+.main-content { display: grid; grid-template-columns: 1fr 350px; gap: 30px; align-items: start; }
+.video-container { position: relative; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+#mjpegStream { width: 100%; height: auto; display: block; }
+#annotationCanvas { position: absolute; top: 0; left: 0; cursor: crosshair; z-index: 10; }
+.controls-panel { background: rgba(255, 255, 255, 0.9); border-radius: 15px; padding: 25px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); }
+.control-group { margin-bottom: 25px; }
+.control-group h3 { color: #2c3e50; margin-bottom: 15px; font-size: 1.2em; font-weight: 500; }
+.category-selector { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px; }
+.category-btn { padding: 12px; border: 2px solid #e0e6ed; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center; font-weight: 500; font-size: 0.9em; }
+.category-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+.category-btn.active { border-color: #3498db; background: #3498db; color: white; }
+.category-btn.safe.active { background: #27ae60; border-color: #27ae60; }
+.category-btn.warning.active { background: #f39c12; border-color: #f39c12; }
+.category-btn.error.active { background: #e74c3c; border-color: #e74c3c; }
+.action-buttons { display: flex; flex-direction: column; gap: 10px; }
+.btn { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: 500; transition: all 0.3s ease; font-size: 1em; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+.btn-primary { background: linear-gradient(135deg, #3498db, #2980b9); color: white; }
+.btn-secondary { background: linear-gradient(135deg, #95a5a6, #7f8c8d); color: white; }
+.btn-danger { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; }
+.annotations-list { max-height: 200px; overflow-y: auto; border: 1px solid #e0e6ed; border-radius: 10px; padding: 15px; background: #f8f9fa; }
+.annotation-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; margin: 5px 0; background: white; border-radius: 8px; border-left: 4px solid #3498db; font-size: 0.9em; }
+.annotation-item.safe { border-left-color: #27ae60; }
+.annotation-item.warning { border-left-color: #f39c12; }
+.annotation-item.error { border-left-color: #e74c3c; }
+.delete-annotation { background: #e74c3c; color: white; border: none; border-radius: 5px; padding: 4px 8px; cursor: pointer; font-size: 0.8em; }
+.status-indicator { display: flex; align-items: center; gap: 8px; margin-top: 15px; padding: 10px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 8px; color: #155724; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #28a745; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+@media (max-width: 1024px) { .main-content { grid-template-columns: 1fr; gap: 20px; } .controls-panel { order: -1; } }
+
+

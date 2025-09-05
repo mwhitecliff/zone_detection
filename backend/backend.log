@@ -1,0 +1,71 @@
+nohup: ignoring input
+[0:30:43.363003347] [3759] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[0:30:43.370346666] [3776] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[0:30:43.380658634] [3776] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[0:30:43.383590136] [3759] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[0:30:43.383678750] [3776] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+[0:36:41.269071742] [4393] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[0:36:41.276810877] [4399] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[0:36:41.286074788] [4399] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[0:36:41.289010003] [4393] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[0:36:41.289113060] [4399] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:06:44] "GET /healthz HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:06:55] "GET / HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:06:55] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:06:55] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:06:56] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.104 - - [05/Sep/2025 09:07:29] "POST /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:07:29] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:08:37] "POST /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:08:37] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:12:30] "GET /video_feed HTTP/1.1" 200 -
+127.0.0.1 - - [05/Sep/2025 09:13:06] "GET /healthz HTTP/1.1" 200 -
+[0:53:23.917282327] [6063] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[0:53:23.924371255] [6070] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[0:53:23.933657148] [6070] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[0:53:23.936688680] [6063] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[0:53:23.936838401] [6070] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:23:27] "GET /healthz HTTP/1.1" 200 -
+127.0.0.1 - - [05/Sep/2025 09:23:27] "GET /healthz HTTP/1.1" 200 -
+[0:54:18.240793019] [6195] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[0:54:18.248109809] [6201] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[0:54:18.257684665] [6201] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[0:54:18.260552506] [6195] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[0:54:18.260666006] [6201] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:24:21] "GET /healthz HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:56] "GET / HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:56] "GET /static/styles.css HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:56] "GET /static/app.js HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:56] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:56] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:24:57] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.104 - - [05/Sep/2025 09:25:36] "POST /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:25:37] "GET /regions HTTP/1.1" 200 -

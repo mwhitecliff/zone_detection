@@ -1,0 +1,57 @@
+{
+  "regions": [
+    {
+      "x": 331,
+      "y": 193,
+      "width": 324,
+      "height": 332,
+      "category": "safe"
+    },
+    {
+      "x": 654,
+      "y": 178,
+      "width": 37,
+      "height": 372,
+      "category": "warning"
+    },
+    {
+      "x": 310,
+      "y": 129,
+      "width": 343,
+      "height": 62,
+      "category": "warning"
+    },
+    {
+      "x": 253,
+      "y": 193,
+      "width": 75,
+      "height": 362,
+      "category": "warning"
+    },
+    {
+      "x": 333,
+      "y": 531,
+      "width": 321,
+      "height": 41,
+      "category": "warning"
+    },
+    {
+      "x": 717,
+      "y": 69,
+      "width": 184,
+      "height": 332,
+      "category": "error"
+    },
+    {
+      "x": 64,
+      "y": 58,
+      "width": 107,
+      "height": 422,
+      "category": "error"
+    }
+  ],
+  "videoResolution": {
+    "width": 960,
+    "height": 720
+  }
+}

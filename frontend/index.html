@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Stream Annotation Tool</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Video Stream Annotation Tool</h1>
+            <p>Zeichnen Sie Bereiche auf dem Live-Stream und speichern Sie sie im Backend</p>
+        </div>
+
+        <div class="main-content">
+            <div class="video-container">
+                <!-- Ersetzt Video-Tag aus Vorlage: MJPEG Stream vom Backend -->
+                <img id="mjpegStream" src="/video_feed" alt="Live Stream" />
+                <canvas id="annotationCanvas"></canvas>
+            </div>
+
+            <div class="controls-panel">
+                <div class="control-group">
+                    <h3>Kategorie auswählen</h3>
+                    <div class="category-selector">
+                        <div class="category-btn safe active" data-category="safe">🟢 Safe</div>
+                        <div class="category-btn warning" data-category="warning">🟠 Warning</div>
+                        <div class="category-btn error" data-category="error">🔴 Error</div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Aktionen</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="sendDataBtn">📤 An Backend senden</button>
+                        <button class="btn btn-secondary" id="clearAllBtn">🗑️ Alle löschen</button>
+                        <button class="btn btn-secondary" id="toggleVideoBtn">⏯️ Stream pausieren</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Aktive Annotationen</h3>
+                    <div class="annotations-list" id="annotationsList">
+                        <p style="color: #7f8c8d; text-align: center;">Keine Annotationen vorhanden</p>
+                    </div>
+                </div>
+
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="statusText">System bereit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
+
+
