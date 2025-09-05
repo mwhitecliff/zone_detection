@@ -69,3 +69,172 @@ Press CTRL+C to quit
 192.168.1.104 - - [05/Sep/2025 09:24:57] "GET /favicon.ico HTTP/1.1" 204 -
 192.168.1.104 - - [05/Sep/2025 09:25:36] "POST /regions HTTP/1.1" 200 -
 192.168.1.104 - - [05/Sep/2025 09:25:37] "GET /regions HTTP/1.1" 200 -
+[1:13:40.590517536] [8732] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:13:40.597512221] [8751] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:13:40.598079386] [8751] [1;31mERROR [1;37mV4L2 [1;34mv4l2_device.cpp:390 [0;32m'imx500 10-001a': [0mUnable to set controls: Device or resource busy
+[1:13:40.606726323] [8751] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:13:40.607551495] [8732] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1011 [0mPipeline handler in use by another process
+Camera __init__ sequence did not complete.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 353, in __init__
+    self._open_camera()
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 565, in _open_camera
+    self.camera.acquire()
+RuntimeError: Failed to acquire camera: Device or resource busy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Hackathon/zone_detection/backend/app.py", line 140, in <module>
+    app = create_app()
+          ^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/app.py", line 25, in create_app
+    camera = Camera()
+             ^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 103, in __init__
+    self.impl = _PiCamera(width, height, fps)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 31, in __init__
+    self.picam = Picamera2()
+                 ^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 365, in __init__
+    raise RuntimeError("Camera __init__ sequence did not complete.")
+RuntimeError: Camera __init__ sequence did not complete.
+[1:17:25.932694178] [9033] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:17:25.939838340] [9039] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:17:25.940410561] [9039] [1;31mERROR [1;37mV4L2 [1;34mv4l2_device.cpp:390 [0;32m'imx500 10-001a': [0mUnable to set controls: Device or resource busy
+[1:17:25.949969871] [9039] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:17:25.950959308] [9033] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1011 [0mPipeline handler in use by another process
+Camera __init__ sequence did not complete.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 353, in __init__
+    self._open_camera()
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 565, in _open_camera
+    self.camera.acquire()
+RuntimeError: Failed to acquire camera: Device or resource busy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Hackathon/zone_detection/backend/app.py", line 140, in <module>
+    app = create_app()
+          ^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/app.py", line 25, in create_app
+    camera = Camera()
+             ^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 103, in __init__
+    self.impl = _PiCamera(width, height, fps)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 31, in __init__
+    self.picam = Picamera2()
+                 ^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 365, in __init__
+    raise RuntimeError("Camera __init__ sequence did not complete.")
+RuntimeError: Camera __init__ sequence did not complete.
+[1:22:23.836773883] [9779] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:22:23.843982887] [9785] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:22:23.844547942] [9785] [1;31mERROR [1;37mV4L2 [1;34mv4l2_device.cpp:390 [0;32m'imx500 10-001a': [0mUnable to set controls: Device or resource busy
+[1:22:23.853480112] [9785] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:22:23.854982586] [9779] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1011 [0mPipeline handler in use by another process
+Camera __init__ sequence did not complete.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 353, in __init__
+    self._open_camera()
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 565, in _open_camera
+    self.camera.acquire()
+RuntimeError: Failed to acquire camera: Device or resource busy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Hackathon/zone_detection/backend/app.py", line 140, in <module>
+    app = create_app()
+          ^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/app.py", line 25, in create_app
+    camera = Camera()
+             ^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 103, in __init__
+    self.impl = _PiCamera(width, height, fps)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Hackathon/zone_detection/backend/camera.py", line 31, in __init__
+    self.picam = Picamera2()
+                 ^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 365, in __init__
+    raise RuntimeError("Camera __init__ sequence did not complete.")
+RuntimeError: Camera __init__ sequence did not complete.
+[1:24:59.266519686] [10245] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:24:59.273592856] [10252] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:24:59.282805779] [10252] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:24:59.285692926] [10245] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[1:24:59.285787337] [10252] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:55:02] "GET /healthz HTTP/1.1" 200 -
+[1:26:02.397914445] [10430] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:26:02.405153658] [10436] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:26:02.414374879] [10436] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:26:02.417305732] [10430] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[1:26:02.417402217] [10436] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:56:05] "GET /healthz HTTP/1.1" 200 -
+[1:27:21.399748349] [10549] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[1:27:21.406747926] [10557] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[1:27:21.415952591] [10557] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a to CFE device /dev/media2 and ISP device /dev/media1 using PiSP variant BCM2712_C0
+[1:27:21.418953595] [10549] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 2028x1520-RGGB_PISP_COMP1/RAW
+[1:27:21.419046376] [10557] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx500@1a - Selected sensor format: 2028x1520-SRGGB10_1X10 - Selected CFE format: 2028x1520-PC1R
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Sep/2025 09:57:24] "GET /healthz HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:30] "GET / HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:30] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:30] "GET /static/styles.css HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:31] "GET /static/app.js HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:31] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 09:57:31] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET / HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "POST /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET /static/styles.css HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET /static/app.js HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:23] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.104 - - [05/Sep/2025 10:00:40] "POST /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:40] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:42] "GET / HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:43] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:43] "GET /static/styles.css HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:43] "GET /static/app.js HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:43] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:43] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET / HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET /static/styles.css HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET /static/app.js HTTP/1.1" 304 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET /regions HTTP/1.1" 200 -
+192.168.1.104 - - [05/Sep/2025 10:00:46] "GET /favicon.ico HTTP/1.1" 204 -
+192.168.1.103 - - [05/Sep/2025 10:01:10] code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x88JJ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+192.168.1.103 - - [05/Sep/2025 10:01:10] "õ ñÑ\=^6â\IvIº÷^þ6cø] c0 G³\7yN{£iT[b¢içP©  ::À+À/À,À0Ì©Ì¨ÀÀ   / 5 JJ      " 400 -
+192.168.1.103 - - [05/Sep/2025 10:01:10] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06õ\x01\x00\x06ñ\x03\x03g\x97\x91Â×D\x19Òºµ×\x11ukBº¬¯1')
+192.168.1.103 - - [05/Sep/2025 10:01:10] "õ ñgÂ×DÒºµ×ukBº¬¯1*P6;Õ" 400 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET / HTTP/1.1" 200 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET /static/styles.css HTTP/1.1" 200 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET /video_feed HTTP/1.1" 200 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET /static/app.js HTTP/1.1" 200 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET /regions HTTP/1.1" 200 -
+192.168.1.103 - - [05/Sep/2025 10:01:13] "GET /favicon.ico HTTP/1.1" 204 -
