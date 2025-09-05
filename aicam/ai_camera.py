@@ -17,7 +17,7 @@ class ObjectFrame:
         self.h = h
 
 class IMX500Detector:
-    def __init__(self, model_path="/usr/share/imx500-models/imx500_network_yolov8n_pp.rpk"):
+    def __init__(self, model_path="./imx500-models/imx500_network_yolov8n_pp.rpk"):
         self.last_detections = []
         self.last_results = None
         self.zone_list: list[ObjectFrame] = []
