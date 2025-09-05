@@ -28,7 +28,7 @@ nohup "${PY}" -u "${APP_DIR}/app.py" >> "${LOG_FILE}" 2>&1 &
 
 # Warten bis Health-Check OK ist
 for i in {1..30}; do
-  if curl -fsS http://127.0.0.1:5000/healthz >/dev/null; then
+  if curl -fsS http://127.0.0.1:5000/healthz >/dev/null 2>&1; then
     echo "Backend läuft auf Port 5000."
     exit 0
   fi
