@@ -1,32 +1,25 @@
 {
   "regions": [
     {
-      "x": 523,
-      "y": 146,
+      "x": 176,
+      "y": 69,
+      "width": 651,
+      "height": 588,
+      "category": "error"
+    },
+    {
+      "x": 309,
+      "y": 184,
+      "width": 376,
+      "height": 369,
+      "category": "warning"
+    },
+    {
+      "x": 405,
+      "y": 268,
       "width": 174,
-      "height": 178,
+      "height": 197,
       "category": "safe"
-    },
-    {
-      "x": 121,
-      "y": 121,
-      "width": 125,
-      "height": 205,
-      "category": "safe"
-    },
-    {
-      "x": 136,
-      "y": 423,
-      "width": 282,
-      "height": 124,
-      "category": "error"
-    },
-    {
-      "x": 703,
-      "y": 461,
-      "width": 161,
-      "height": 122,
-      "category": "error"
     }
   ],
   "videoResolution": {

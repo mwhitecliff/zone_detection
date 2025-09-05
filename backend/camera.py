@@ -4,8 +4,7 @@ import time
 import threading
 from typing import Generator
 
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 
 try:
     from picamera2 import Picamera2

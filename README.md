@@ -28,26 +28,24 @@ Ein leichtgewichtiges Tool, um auf einem Raspberry Pi einen Live‑Videostream a
 - Kamera: `picamera2` kompatible Pi‑Kamera ODER Verwendung des Dummy‑Streams
 
 ## Installation (Backend)
-1) In das Projektverzeichnis wechseln (vom Repo‑Root aus):
+1) Vom Repo‑Root aus in den Backend‑Ordner wechseln:
 ```bash
 cd backend
 ```
-2) Optionale virtuelle Umgebung (empfohlen):
+2) Abhängigkeiten installieren (ohne virtuelle Umgebung):
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+pip3 install -r requirements.txt
 ```
-3) Abhängigkeiten installieren:
-```bash
-pip install -r requirements.txt
-```
+Hinweis:
+- Keine virtuelle Umgebung verwenden. Auf dem Raspberry Pi benötigt `picamera2` Systembibliotheken und läuft häufig nicht zuverlässig innerhalb eines venv.
+- Wenn keine echte Kamera oder kein `picamera2` installiert ist, kann der Dummy‑Stream genutzt werden (siehe unten).
 
 Hinweis: Auf dem Raspberry Pi können zusätzliche Systempakete für `picamera2` nötig sein. Prüfe ggf. offizielle Anleitungen (`libcamera`, `picamera2`). Für Tests ohne Kamera kann der Dummy‑Stream genutzt werden.
 
 ## Starten
 - Direkt starten:
 ```bash
-python backend/app.py
+python3 backend/app.py
 ```
   - Der Server lauscht auf `0.0.0.0:5000`
 
@@ -56,16 +54,25 @@ python backend/app.py
 bash scripts/start_backend.sh
 ```
 
+Falls auf dem Gerät keine echte Kamera verfügbar ist oder `picamera2` nicht installiert ist, setze eine der folgenden Optionen (Repo‑Root):
+```bash
+# Dummy-Stream erzwingen
+USE_DUMMY_CAMERA=1 python3 backend/app.py
+
+# oder echtes Kamera‑Erfordernis abschalten
+REQUIRE_REAL_CAMERA=0 python3 backend/app.py
+```
+
 ### Kamera‑Modi steuern
 - Dummy erzwingen (keine echte Kamera notwendig):
 ```bash
 export USE_DUMMY_CAMERA=1
-python backend/app.py
+python3 backend/app.py
 ```
 - Echte Kamera erzwingen (Fehler, wenn nicht verfügbar):
 ```bash
 export REQUIRE_REAL_CAMERA=1
-python backend/app.py
+python3 backend/app.py
 ```
 
 ## Nutzung
@@ -85,6 +92,10 @@ python backend/app.py
 ## Entwicklung
 - Frontend‑Assets liegen unter `frontend/static/`. Änderungen an `app.js`/`styles.css` werden beim Reload sichtbar.
 - Logs: Das Flask‑Default‑Logging erscheint im Terminal. Eigene Logfiles (`backend.log`) können in `backend/` entstehen.
+
+## Abhängigkeiten (kurz)
+- Minimal benötigt: `Flask`, `flask-cors`, `Pillow`.
+- Für echte Kamera: `picamera2` (in der Regel über Raspberry Pi OS/apt installierbar). Ohne `picamera2` läuft automatisch der Dummy‑Stream oder du setzt `USE_DUMMY_CAMERA=1`.
 
 ## Troubleshooting
 - Kein Kamerabild: Setze `USE_DUMMY_CAMERA=1` zum Testen ohne Hardware.
