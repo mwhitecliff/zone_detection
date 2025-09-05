@@ -28,9 +28,9 @@ Ein leichtgewichtiges Tool, um auf einem Raspberry Pi einen Live‑Videostream a
 - Kamera: `picamera2` kompatible Pi‑Kamera ODER Verwendung des Dummy‑Streams
 
 ## Installation (Backend)
-1) In das Projektverzeichnis wechseln:
+1) In das Projektverzeichnis wechseln (vom Repo‑Root aus):
 ```bash
-cd /Hackathon/zone_detection/backend
+cd backend
 ```
 2) Optionale virtuelle Umgebung (empfohlen):
 ```bash
@@ -51,7 +51,7 @@ python backend/app.py
 ```
   - Der Server lauscht auf `0.0.0.0:5000`
 
-- Alternativ mit Skript:
+- Alternativ mit Skript (vom Repo‑Root aus):
 ```bash
 bash scripts/start_backend.sh
 ```

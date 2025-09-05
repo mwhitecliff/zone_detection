@@ -1,20 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-APP_DIR="/Hackathon/zone_detection/backend"
-LOG_FILE="/Hackathon/zone_detection/backend/backend.log"
-PY="/usr/bin/python3"
+# Verzeichnisse dynamisch relativ zum Skript bestimmen
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+APP_DIR="${ROOT_DIR}/backend"
+LOG_FILE="${APP_DIR}/backend.log"
 
-# Echte Kamera erzwingen
-export REQUIRE_REAL_CAMERA=1
-export USE_DUMMY_CAMERA=0
+# Python auf PATH, fallback auf /usr/bin/python3
+PY="${PYTHON:-python3}"
+if ! command -v "$PY" >/dev/null 2>&1; then
+  PY="/usr/bin/python3"
+fi
 
-cd "$APP_DIR"
+# Standard: echte Kamera erlauben, Dummy aus (kann vom Nutzer überschrieben werden)
+export REQUIRE_REAL_CAMERA="${REQUIRE_REAL_CAMERA:-1}"
+export USE_DUMMY_CAMERA="${USE_DUMMY_CAMERA:-0}"
+
+mkdir -p "${APP_DIR}"
+cd "${APP_DIR}"
 
 # Vorherigen Prozess stoppen (falls vorhanden)
-pkill -f "$PY -u $APP_DIR/app.py" || true
+pkill -f "${PY} -u ${APP_DIR}/app.py" || true
 
-nohup "$PY" -u "$APP_DIR/app.py" >> "$LOG_FILE" 2>&1 &
+# Starten
+nohup "${PY}" -u "${APP_DIR}/app.py" >> "${LOG_FILE}" 2>&1 &
 
 # Warten bis Health-Check OK ist
 for i in {1..30}; do
@@ -26,7 +36,7 @@ for i in {1..30}; do
 done
 
 echo "Backend startete nicht erfolgreich. Letzte Logs:" >&2
-tail -n 100 "$LOG_FILE" || true
+tail -n 100 "${LOG_FILE}" || true
 exit 1
 
 

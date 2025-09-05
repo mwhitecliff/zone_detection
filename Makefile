@@ -2,14 +2,17 @@ SHELL := /bin/bash
 
 .PHONY: start stop logs health
 
+# Wurzelverzeichnis des Projekts relativ zu diesem Makefile
+ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
 start:
-	@bash /Hackathon/zone_detection/scripts/start_backend.sh
+	@bash "$(ROOT_DIR)scripts/start_backend.sh"
 
 stop:
-	@bash /Hackathon/zone_detection/scripts/stop_backend.sh
+	@bash "$(ROOT_DIR)scripts/stop_backend.sh"
 
 logs:
-	@tail -n 200 /Hackathon/zone_detection/backend/backend.log
+	@tail -n 200 "$(ROOT_DIR)backend/backend.log" || true
 
 health:
 	@curl -fsS http://127.0.0.1:5000/healthz && echo || true
